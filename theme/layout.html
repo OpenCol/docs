@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Crect x='.5' y='.5' width='21' height='21' fill='none' stroke='%2306b6d4'/%3E%3Crect x='4.5' y='4.5' width='13' height='13' fill='none' stroke='%230c50b6'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="{{colcss}}">
+<link rel="stylesheet" href="{{sitecss}}">
+<script>
+  try {
+    const t = localStorage.getItem("docs-theme");
+    if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+  } catch {}
+</script>
+</head>
+<body class="docs docs--{{kind}}" data-root="{{root}}">
+
+<div class="col-bar">
+  <div class="col-bar-in">
+    <a class="col-skip-link" href="#content">Skip to content</a>
+    <button class="col-btn col-btn--ghost col-btn--sm col-docs-toggle" type="button"
+            aria-controls="docs-index" aria-expanded="false">Menu</button>
+    <a class="col-brand" href="{{root}}"><span class="col-brand-mark"></span> {{sitetitle}} <span class="col-faint docs-brand-sub">docs</span></a>
+    <div class="col-search" role="search">
+      <input class="col-input col-input--sm" type="search" id="docs-search"
+             placeholder="Search the documentation" autocomplete="off" spellcheck="false"
+             aria-label="Search the documentation" aria-controls="docs-results" aria-expanded="false">
+      <div class="col-search-results" id="docs-results" role="listbox" hidden></div>
+    </div>
+    <div class="col-push col-segmented docs-theme" id="docs-theme" aria-label="Colour theme">
+      <button type="button" data-t="light">Light</button>
+      <button type="button" data-t="dark">Dark</button>
+      <button type="button" data-t="auto" class="is-active">Auto</button>
+    </div>
+    <a class="col-btn col-btn--quiet col-btn--sm docs-repo" href="{{repo}}" rel="noopener">GitHub</a>
+  </div>
+</div>
+
+<div class="col-docs">
+  <aside class="col-docs-side" id="docs-index">{{nav}}</aside>
+  <main class="col-docs-main" id="content">
+    {{body}}
+    {{pager}}
+    <footer class="col-foot docs-foot">
+      <p>An independent research project. Sid Meier's Colonization belongs to its rights holders;
+        nothing here is affiliated with them.</p>
+      <p>Figures come from the reconstructed code of the 1995 Windows release ·
+        styled with <a href="https://github.com/colonization-re/web-ui/releases/tag/{{webui}}" rel="noopener">web-ui {{webui}}</a> ·
+        <a href="{{repo}}" rel="noopener">source on GitHub</a> · {{year}}</p>
+    </footer>
+  </main>
+  <aside class="col-docs-toc">{{toc}}</aside>
+</div>
+
+<script src="{{sitejs}}" defer></script>
+</body>
+</html>

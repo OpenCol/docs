@@ -1,0 +1,37 @@
+/* site.css - this site's composition on top of web-ui's col.css.
+ *
+ * Everything general lives in web-ui (.col-docs, .col-nav, .col-toc,
+ * .col-prose, .col-search, .col-pager). What is here is specific to this
+ * site: the bar's arrangement, the page header and the landing page. If a
+ * rule here starts looking general, move it into web-ui and cut a release.
+ */
+
+.docs-brand-sub{font-weight:400}
+.col-bar .col-search{margin-left:12px}
+.docs-theme button{padding-left:10px;padding-right:10px}
+
+@media (max-width:899px){
+  .col-bar .col-search{order:10;flex-basis:100%;max-width:none;margin-left:0}
+  .docs-repo{display:none}
+}
+@media (max-width:520px){
+  .docs-brand-sub{display:none}
+}
+
+/* The page header: breadcrumb, title, lead. */
+.docs-head{margin:0 0 28px;padding:0 0 22px;border-bottom:1px solid var(--border)}
+.docs-head h1{margin:0 0 10px}
+.docs-head .col-lead{margin:0;max-width:64ch}
+
+/* The landing page. */
+.docs--home .col-docs-main{padding-top:28px}
+.docs-sections{display:grid;gap:16px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.docs-section{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.docs-section .col-dim{margin:0 0 10px;font-size:14.5px}
+.docs-section-list{margin:0 0 16px;padding-left:1.2em;font-size:14.5px;line-height:1.75}
+.docs-section-list li::marker{color:var(--text-3)}
+.docs-section .col-btn{margin-top:auto}
+.docs-section--soon{background:var(--surface-2)}
+
+.docs-foot p{margin:0 0 6px}

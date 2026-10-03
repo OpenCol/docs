@@ -1,0 +1,18 @@
+{
+  "name": "@colonization-re/docs",
+  "private": true,
+  "description": "Documentation site for the Colonization RE project, built for GitHub Pages",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs --serve",
+    "dev:local-ui": "node scripts/build.mjs --css ../web-ui/dist/col.min.css --serve"
+  },
+  "dependencies": {
+    "marked": "^18.0.14"
+  }
+}

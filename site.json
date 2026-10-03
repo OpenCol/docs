@@ -1,0 +1,35 @@
+{
+  "title": "Colonization RE",
+  "subtitle": "Documentation",
+  "description": "How Sid Meier's Colonization really works, read out of the game's own code: player guides, file formats and the differences between versions.",
+  "base": "/docs/",
+  "repo": "https://github.com/colonization-re/docs",
+  "sections": [
+    {
+      "dir": "players",
+      "title": "Player guides",
+      "blurb": "How the game works, with the exact numbers: terrain, units, Europe, combat, Founding Fathers and difficulty.",
+      "pages": [
+        "map-generation",
+        "terrain",
+        "units",
+        "europe",
+        "combat",
+        "founding-fathers",
+        "difficulty"
+      ]
+    },
+    {
+      "dir": "formats",
+      "title": "File formats",
+      "blurb": "Save games, maps, graphics and text resources, byte by byte.",
+      "soon": true
+    },
+    {
+      "dir": "versions",
+      "title": "Version differences",
+      "blurb": "What changed between the DOS, Windows and Macintosh releases.",
+      "soon": true
+    }
+  ]
+}
