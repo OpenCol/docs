@@ -12,7 +12,7 @@ Every push to `main` rebuilds and deploys it.
 
 | Section | Status |
 | --- | --- |
-| Player guides — map generation, terrain, units, Europe, combat, Founding Fathers, difficulty | published |
+| Player guides — map generation, terrain, units, Europe, taxes, combat, Founding Fathers, difficulty | published |
 | File formats — save games, maps, graphics, text resources | in preparation |
 | Version differences — DOS, Windows and Macintosh | in preparation |
 

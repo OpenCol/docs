@@ -184,6 +184,9 @@ Your market is not yours alone.
 
 ## 5. Taxes
 
+*For the whole tax picture in one place, with advice on when to pay and when to party, see
+[How Taxes Work](taxes.md).*
+
 ### What is taxed
 
 | Transaction | Taxed? |
@@ -298,9 +301,10 @@ chest. **Jakob Fugger** lifts every current boycott for free, once. See [Jakob F
 
 Computer players never hold Tea Parties.
 
-> **Tip:** A Tea Party is best spent on a good you rarely trade in Europe, and the game picks that good for you.
-> Look at the colony and good named in the option before you choose. Refusing a 1-point raise is rarely worth losing
-> a good you sell every turn. Refusing a Stamp Act often is.
+> **Tip:** The game does not pick the good you trade least. It picks the last one in market order that has any
+> weight, which is why tools come up so often. Look at the colony and good named in the option before you choose.
+> Refusing a 1-point raise is rarely worth losing a good you sell every turn. Refusing a Stamp Act often is. To steer
+> the choice, see [How Taxes Work](taxes.md#5-what-to-do-about-it).
 
 > **Tip:** The 10-point raise for the King's frigate is an ordinary tax raise, so it can come with the Tea Party
 > option. If you hold the party, you keep the frigate and refuse the tax.
