@@ -13,6 +13,7 @@ The full layouts are in [DOS file formats](../formats/dos/index.md) and
 | `.MP` layout | width, height, version 4, three planes | the same |
 | Save header | `COLONIZE\0`, `0x1a`, version 73, map size at `0x0c` | the same bytes |
 | Save records | 18-byte settlements, 28-byte units, 202-byte colonies, ahead of four map planes | the same sizes, in the same order |
+| Every save field | all ten 1994 saves parse with the Windows layout and re-serialise byte for byte | the [57-field layout](../formats/windows/save.md) |
 
 Measured on `AMER2.MP` from both installs, on the Windows `AUTO01.SAV` and on
 the 1994 DOS saves. See [DOS maps and saves](../formats/dos/maps-and-saves.md),

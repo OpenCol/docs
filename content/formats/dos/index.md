@@ -20,7 +20,7 @@ its tests re-measure the counts on these pages against a real install.
 | [`.PIK` pictures](pik.md) | 35 | round-trips |
 | [`.FF` fonts](ff.md) | 5 | every byte accounted for |
 | [Palettes and `VICEROY.PAL`](palettes.md) | 1, plus one in nearly every sheet and picture | stored on disk, 6 bits a channel |
-| [Maps and saves](maps-and-saves.md) | `AMER2.MP`, `COLONYnn.SAV` | map planes and scenery seed solved |
+| [Maps and saves](maps-and-saves.md) | `AMER2.MP`, `COLONYnn.SAV` | the Windows save layout, byte for byte |
 | [Text files](text.md) | 18 `.TXT`, 2 `.DB` | plain code page 437 |
 
 ## Not covered yet

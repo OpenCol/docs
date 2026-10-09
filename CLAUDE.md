@@ -37,8 +37,8 @@ npm run dev:local-ui   # same, against ../web-ui/dist/col.min.css
   explicitly about them. The file format pages (`content/formats/`) are: they
   cite code addresses as evidence and link the public tools that implement
   each format.
-- **The format pages are the only copy.** win-tools and dos-tools link to
-  them instead of keeping their own. Their code docstrings still carry each
+- **The format pages are the only copy.** win-tools, dos-tools and sav-editor
+  link to them instead of keeping their own. Their code docstrings still carry each
   layout; when a page and a docstring disagree, re-derive the fact, do not
   copy one over the other.
 - **Figures on the Windows format pages are tested.** win-tools'

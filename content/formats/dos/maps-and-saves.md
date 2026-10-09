@@ -48,8 +48,12 @@ square. It is hashed from a **scenery seed** (`resource_at`, `lost_city_at`),
 and the seed is a little-endian word 890 bytes from the end of the save,
 followed by the 888-byte route table.
 
-## Compared with Windows
+## The fields
 
-The arithmetic is the same as the [Windows save](../windows/save.md), with the
-same magic, the same version word and the same record sizes. A `.MP` from one
-release is a `.MP` for the other.
+The DOS save is the [Windows save](../windows/save.md), field for field: the same
+magic, the same version word, the same record sizes and the same 57 writes. All
+ten 1994 DOS saves parse with the Windows layout and re-serialise byte for
+byte, and their dates agree with the game's turn-to-year rule. The Windows page
+describes every block, the records, the map planes and the tail.
+
+A `.MP` from one release is a `.MP` for the other.

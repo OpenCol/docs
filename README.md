@@ -18,8 +18,9 @@ Every push to `main` rebuilds and deploys it.
 | Version differences — asset formats compared; rules, interface and the Macintosh release to come | started |
 
 The file format pages are the reference for the project's asset tools,
-[win-tools](https://github.com/OpenCol/win-tools) and
-[dos-tools](https://github.com/OpenCol/dos-tools), which link here rather than
+[win-tools](https://github.com/OpenCol/win-tools),
+[dos-tools](https://github.com/OpenCol/dos-tools) and
+[sav-editor](https://github.com/OpenCol/sav-editor), which link here rather than
 keeping their own copies.
 
 ## Working on it
