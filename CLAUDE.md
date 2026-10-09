@@ -5,7 +5,7 @@ Guidance for Claude Code working in this repo.
 ## What this is
 
 The public documentation site for the Colonization RE project, deployed to
-<https://colonization-re.github.io/docs/> by `.github/workflows/pages.yml` on
+<https://opencol.github.io/docs/> by `.github/workflows/pages.yml` on
 every push to `main`. Markdown in `content/` → static HTML in `_site/`.
 
 ## Commands
@@ -34,4 +34,19 @@ npm run dev:local-ui   # same, against ../web-ui/dist/col.min.css
 - **`_site/` is generated** and git-ignored. Never edit it.
 - **Content is for players and readers**, not reverse engineers. Keep internal
   tooling, addresses and repository names out of the prose unless a page is
-  explicitly about them.
+  explicitly about them. The file format pages (`content/formats/`) are: they
+  cite code addresses as evidence and link the public tools that implement
+  each format.
+- **The format pages are the only copy.** win-tools and dos-tools link to
+  them instead of keeping their own. Their code docstrings still carry each
+  layout; when a page and a docstring disagree, re-derive the fact, do not
+  copy one over the other.
+- **Figures on the Windows format pages are tested.** win-tools'
+  `tests/test_docs.py` re-derives the counts in `formats/windows/files.md`,
+  `sprt.md`, `cvpc.md`, `ctab.md` and `ne-container.md` from a real install and
+  matches them as literal strings, line breaks included. Change a figure there
+  only together with the measurement, and run that test against this checkout
+  (`COLWIN_DOCS=<this repo>`) after editing those pages.
+- **Addresses differ per release.** Windows pages use segment:offset in
+  `COLONIZE.EXE` (`1068:0180`); DOS pages use file offsets in `VICEROY.EXE`
+  with the routine name (`draw_icon`, file `0xe76a`). Do not mix them.

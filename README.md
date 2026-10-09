@@ -2,7 +2,7 @@
 
 How Sid Meier's Colonization really works, read out of the game's own code.
 
-**Read it at <https://colonization-re.github.io/docs/>.**
+**Read it at <https://opencol.github.io/docs/>.**
 
 The site is plain Markdown in `content/`, rendered to static HTML by a small
 Node script and styled with [web-ui](https://github.com/colonization-re/web-ui).
@@ -13,8 +13,14 @@ Every push to `main` rebuilds and deploys it.
 | Section | Status |
 | --- | --- |
 | Player guides — map generation, terrain, units, Europe, taxes, combat, Founding Fathers, difficulty | published |
-| File formats — save games, maps, graphics, text resources | in preparation |
-| Version differences — DOS, Windows and Macintosh | in preparation |
+| Windows file formats — every file of the 1995 release: NE container, `SPRT`, `CVPC`, `CTAB`, palettes, `TEXT`, `FLIC`, DIBs, `.MP`, `.SAV`, ARCV | published |
+| DOS file formats — MADSPACK, FAB, `.SS`, `.PIK`, `.FF`, palettes, maps and saves, text | published |
+| Version differences — asset formats compared; rules, interface and the Macintosh release to come | started |
+
+The file format pages are the reference for the project's asset tools,
+[win-tools](https://github.com/OpenCol/win-tools) and
+[dos-tools](https://github.com/OpenCol/dos-tools), which link here rather than
+keeping their own copies.
 
 ## Working on it
 

@@ -106,13 +106,16 @@ function render(page, bySrc) {
    * lead. Both move into the page header rather than the body. */
   const h1 = tokens.findIndex((t) => t.type === "heading" && t.depth === 1);
   if (h1 < 0) throw new Error(`${page.src} has no "# Title" line`);
-  page.title = tokens[h1].text;
+  /* Plain text: the title goes into <title>, the sidebar and the pager, where
+   * inline Markdown such as `SPRT` would show its backticks. */
+  const inlineText = (md) => stripTags(new Marked({ gfm: true }).parseInline(md));
+  page.title = inlineText(tokens[h1].text);
   tokens.splice(h1, 1);
   let i = h1;
   while (tokens[i] && tokens[i].type === "space") i++;
   const lead = tokens[i];
   if (lead && lead.type === "paragraph" && /^\*[^*].*\*$/s.test(lead.raw.trim())) {
-    page.lead = lead.text.replace(/^\*|\*$/g, "");
+    page.lead = inlineText(lead.text.replace(/^\*|\*$/g, ""));
     tokens.splice(i, 1);
   }
 
@@ -123,7 +126,6 @@ function render(page, bySrc) {
   page.ids = new Set();
   const search = [];
   let entry = { h: "", id: "", text: [] };
-  const inlineText = (md) => stripTags(new Marked({ gfm: true }).parseInline(md));
   for (const t of tokens) {
     if (t.type === "heading") {
       const text = inlineText(t.text);
@@ -324,9 +326,9 @@ function landing(root) {
     `<h1>How Colonization really works</h1>` +
     `<p class="col-lead">${esc(site.description)}</p>` +
     `<dl class="col-plate-meta"><div><dt>Game</dt><dd>Sid Meier's Colonization</dd></div>` +
-    `<div><dt>Build</dt><dd>Windows, 1995</dd></div>` +
+    `<div><dt>Builds</dt><dd>DOS 1994, Windows 1995</dd></div>` +
     `<div><dt>Source</dt><dd>Reconstructed code</dd></div>` +
-    `<div><dt>Guides</dt><dd>${pages.filter((p) => !p.url.endsWith(`${p.section.dir}/`)).length}</dd></div></dl></div>` +
+    `<div><dt>Pages</dt><dd>${pages.filter((p) => !p.url.endsWith(`${p.section.dir}/`)).length}</dd></div></dl></div>` +
     `<div class="docs-sections">${cards}</div>`
   );
 }

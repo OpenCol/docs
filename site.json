@@ -21,16 +21,46 @@
       ]
     },
     {
-      "dir": "formats",
-      "title": "File formats",
-      "blurb": "Save games, maps, graphics and text resources, byte by byte.",
-      "soon": true
+      "dir": "formats/windows",
+      "title": "Windows file formats",
+      "blurb": "Every file of the 1995 Windows release, byte by byte: the NE container, sprites, canvases, colour tables, text, maps and saves.",
+      "pages": [
+        "files",
+        "ne-container",
+        "sprt",
+        "cvpc",
+        "ctab",
+        "palettes",
+        "text",
+        "flic",
+        "dib",
+        "mp-map",
+        "save",
+        "arcv"
+      ]
+    },
+    {
+      "dir": "formats/dos",
+      "title": "DOS file formats",
+      "blurb": "The 1994 DOS release's MADSPACK archives, FAB compression, sprite sheets, pictures, fonts, palettes, maps and saves.",
+      "pages": [
+        "madspack",
+        "fab",
+        "ss",
+        "pik",
+        "ff",
+        "palettes",
+        "maps-and-saves",
+        "text"
+      ]
     },
     {
       "dir": "versions",
       "title": "Version differences",
-      "blurb": "What changed between the DOS, Windows and Macintosh releases.",
-      "soon": true
+      "blurb": "What changed between the DOS, Windows and Macintosh releases, and what stayed the same.",
+      "pages": [
+        "asset-formats"
+      ]
     }
   ]
 }
