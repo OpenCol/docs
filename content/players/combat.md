@@ -267,8 +267,8 @@ or Mounted Brave that beats a **Soldier** gains muskets. The message reads "Musk
 ### Attacking villages
 
 Attacking natives raises the whole tribe's alarm, more for a village and much more for a capital
-([alarm table](difficulty.md#making-them-angry)). The first time, you are asked to confirm, unless they are already
-angry.
+([alarm table](difficulty.md#making-them-angry)). You are asked to confirm, unless they are already
+at war with you, and asked again whenever the tribe has calmed down a little since.
 
 When braves are standing in the village, you fight them and the village is not harmed. When the village is empty, each
 win against its stand-in defender **shrinks it by one**. It is burned once its last point is gone, so the number of
@@ -281,7 +281,8 @@ wins needed is:
 | Aztec city | 7 | 10 |
 | Inca city | 9 | 13 |
 
-These are the starting sizes. A damaged village grows back towards them over time.
+These are the full sizes. A capital starts at the ordinary size and reaches its capital size in its first 7–9 turns.
+A damaged village grows back towards them over time.
 
 **When a village burns:**
 
@@ -289,8 +290,9 @@ These are the starting sizes. A damaged village grows back towards them over tim
   it is guaranteed and bigger. The full table is under Cortes in [Founding Fathers](founding-fathers.md#military).
 - If **your** mission was there, the missionary walks out alive. If the mission was another nation's, it is lost.
 - Each burned village costs score points ([difficulty](difficulty.md#9-score-and-the-hall-of-fame)).
-- **Burning a capital** makes the tribe submit ("The … tribe bows before the might of …"). Its alarm drops sharply,
-  and every one of its villages forgets its grudge against you.
+- **Burning a capital** makes the tribe submit ("The … tribe bows before the might of …"). Its alarm drops to 15,
+  which also caps its villages' grudges against you. (The game means to clear them outright, but a bug clears another
+  tribe's instead; see [How the Native Americans Work](natives.md#destroying-the-capital).)
 
 **Converts:** beating a village's stand-in defender can produce a convert, but only if your own mission is in that
 village. Juan de Sepulveda, Bartolome de las Casas, an expert mission and playing Spain all change the chance. See

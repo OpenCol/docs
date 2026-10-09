@@ -300,14 +300,15 @@ Peter Minuit makes land free on every level.
 | Asking for a better price works (first try) | 100% | 88% | 75% | 63% | 50% |
 | Haggling *their* price down works (typical) | 78% | 67% | 56% | 44% | 33% |
 
-Natives also charge more when you buy from them, especially for silver and finished goods. A failed haggle can make
-the village refuse that trade for good.
+Natives also charge more when you buy from them, especially for silver and finished goods. A failed haggle makes the
+village refuse those goods until your next completed trade there. The haggling odds above are for goods the village
+barely wants; goods it wants badly allow more tries. See [How the Native Americans Work](natives.md#trading).
 
 ### Scouts and chiefs
 
 | | Discoverer | Explorer | Conquistador | Governor | Viceroy |
 |---|---|---|---|---|---|
-| Chief's gift of gold (average, × tribe level) | 231 | 210 | 189 | 168 | 147 |
+| Chief's gift of gold (average, × (tribe level + 1)) | 231 | 210 | 189 | 168 | 147 |
 | Arawak chief kills your scout ("sacred taboos") | 11% | 13% | 14% | 17% | 20% |
 | …with a Seasoned Scout | 6% | 7% | 8% | 9% | 11% |
 | Uneasy village refuses to teach your colonist | 10% | 30% | 50% | 70% | 90% |
@@ -350,11 +351,12 @@ Harder levels make native raids more likely to succeed and more destructive:
 |---|---|---|---|---|---|
 | "Burn a building" becomes mere theft | 67% | 56% | 44% | 33% | 22% |
 | A stockade stops a theft | 89% | 78% | 67% | 56% | 44% |
-| Early protection (raids do no damage) | until ~1572 | until ~1532 | – | – | – |
+| Early protection (no burning, no ship damage; theft still happens) | until ~1572 | until ~1532 | – | – | – |
 
 ### During the War of Independence
 
-Tribes that dislike you may side with the Crown. They burn your missions and arm themselves with muskets and horses.
+Tribes that dislike you may side with the Crown. They burn your missions, and the Tories multiply whatever muskets
+they already have ([details](natives.md#13-the-war-of-independence)).
 On harder levels a hostile tribe is more likely to join: roughly **1.1% · 1.4% · 1.8% · 2.5% · 4.2%** per tribe per turn
 at an alarm of 50. The chance grows with alarm.
 

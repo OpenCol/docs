@@ -194,10 +194,10 @@ lumberjacks and all building jobs never learn on the job.
 An unarmed colonist entering a village you are at peace with can choose **Live among the natives**.
 
 - **Only free colonists and indentured servants can learn.** A criminal is refused ("we doubt that you will ever be more than a common criminal"), a specialist is told to bring someone without a skill, and a convert "already knows the Indian ways".
-- **Each village teaches one fixed skill.** It is worked out from the village's position, so it never changes, and a scout who speaks with the chief is told what it is.
+- **Each village teaches one skill.** It is drawn from what the village produces, with a seed fixed by its position, so it is stable unless the land around the village changes (for example, when your colonies start working it). A scout who speaks with the chief is told what it is.
 - **A village teaches only once.** A tribe's **capital is the exception**: it keeps teaching.
-- **The tribe's level limits the skill.** Semi-nomadic tribes never teach fur traders or ore miners. Only Advanced and Civilized tribes teach weavers, tobacconists and silver miners. Only Civilized tribes teach master distillers. Fishermen are only taught by coastal villages, and some fur-trapping villages teach Seasoned Scouts instead.
-- **Angry tribes refuse.** An angry tribe sends the colonist away and its alarm rises by 3. An uneasy tribe refuses some of the time: 10% to 90% by difficulty, see [difficulty.md](difficulty.md#scouts-and-chiefs).
+- **The tribe's level limits the skill.** Semi-nomadic tribes never teach fur traders or ore miners. Only Advanced and Civilized tribes teach weavers and silver miners. **No tribe ever teaches master distillers, tobacconists, lumberjacks, carpenters, blacksmiths or gunsmiths**: villages never produce the goods those skills are drawn from. Fishermen are only taught by coastal villages, and some fur-trapping villages teach Seasoned Scouts instead.
+- **Restless and angry tribes refuse.** A tribe with alarm 50 or more sends the colonist away and its alarm rises by 3. An uneasy tribe refuses some of the time: 10% to 90% by difficulty, see [difficulty.md](difficulty.md#scouts-and-chiefs).
 
 > **Tip:** Natives make indentured servants straight into experts, skipping the free-colonist step. Send servants, not free colonists.
 

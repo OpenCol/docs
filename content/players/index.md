@@ -12,6 +12,7 @@ tips. Each one also points out where the game does something different from what
 | [Units and Colonists](units.md) | Unit statistics, colonist types, specialists, teaching, professions, pioneers, scouts, ships, movement and sight |
 | [How Europe Works](europe.md) | Market prices and how they move, taxes, boycotts, buying and training, immigration, sailing to and from Europe |
 | [How Taxes Work](taxes.md) | Tax rates, the King's tax events, Tea Parties, boycotts and when to pay |
+| [How the Native Americans Work](natives.md) | The eight tribes, alarm and grudges, land, learning, trade, tribute, missions and converts, raids and war |
 | [How Combat Works](combat.md) | How a fight is decided, every bonus and penalty, colonies and fortifications, ships, natives, the War of Independence |
 | [What Each Founding Father Does](founding-fathers.md) | All 25 fathers: what the code actually does, when they are offered, the bell cost |
 | [How Difficulty Affects the Game](difficulty.md) | Every number that changes between Discoverer and Viceroy, including the hidden help the AI gets |

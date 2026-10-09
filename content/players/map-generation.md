@@ -451,9 +451,9 @@ Then villages are added until there are **84 settlements** in all, the map is fu
 So there is **at most one village per 5 × 5 block** and no two villages are ever adjacent. They are usually three or more
 squares apart. Tribes spread outwards from their capitals until they meet their neighbours or the sea.
 
-Every settlement then gets one brave, placed within two squares on the same landmass. For the Aztecs and Incas, the
-Mountains within two squares of each village are also counted at this point. That count appears to feed the silver
-those villages trade.
+Every settlement then gets one brave, placed within two squares on the same landmass. The Mountains within two
+squares of each village are also counted at this point, weighted by the tribe's level. That total is the tribe's silver,
+shared among its surviving settlements; only the Aztecs and Incas ever sell it.
 
 Each tribe's starting anger towards you depends on difficulty; see [difficulty.md](difficulty.md).
 
