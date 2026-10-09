@@ -240,7 +240,7 @@ Mercenaries cost more per unit on harder levels:
 | Peacetime offer | 800–1400 | 1000–1600 | 1200–1800 | 1400–2000 | 1600–2200 |
 | During the War of Independence | 600–1200 | 800–1400 | 1000–1600 | 1200–1800 | 1400–2000 |
 
-A peacetime offer comes about once every 21 turns, and artillery counts as two units. During the war, the offer also has fewer regulars on harder levels: 2–4 on Discoverer, down to exactly 2 on Governor and Viceroy.
+A peacetime offer comes about once every 21 turns (less often while you are at war, because the offering nation must be at peace with you), and artillery counts as two units. During the war, the offer also has fewer regulars on harder levels: 2–4 on Discoverer, down to exactly 2 on Governor and Viceroy.
 
 ### Trading at foreign colonies
 

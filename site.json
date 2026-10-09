@@ -8,13 +8,14 @@
     {
       "dir": "players",
       "title": "Player guides",
-      "blurb": "How the game works, with the exact numbers: terrain, units, Europe, taxes, the natives, combat, Founding Fathers and difficulty.",
+      "blurb": "How the game works, with the exact numbers: terrain, units, Europe, taxes, the nations, the natives, combat, Founding Fathers and difficulty.",
       "pages": [
         "map-generation",
         "terrain",
         "units",
         "europe",
         "taxes",
+        "nations",
         "natives",
         "combat",
         "founding-fathers",
