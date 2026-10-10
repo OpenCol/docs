@@ -49,4 +49,11 @@ npm run dev:local-ui   # same, against ../web-ui/dist/col.min.css
   (`COLWIN_DOCS=<this repo>`) after editing those pages.
 - **Addresses differ per release.** Windows pages use segment:offset in
   `COLONIZE.EXE` (`1068:0180`); DOS pages use file offsets in `VICEROY.EXE`
-  with the routine name (`draw_icon`, file `0xe76a`). Do not mix them.
+  with the routine name (`draw_icon`, file `0xe76a`). Do not mix them
+  unlabelled: the shared pages (`content/formats/shared/`) cite both games
+  and say which executable each address is in.
+- **A format both releases read identically goes in `formats/shared/`**, once,
+  with the evidence from both games; the Windows and DOS sections link to it
+  rather than describing it again. `.SAV` and `.MP` are there because every
+  DOS save round-trips through the Windows layout and `AMER2.MP` is the same
+  file in both.

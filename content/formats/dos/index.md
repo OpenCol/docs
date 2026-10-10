@@ -1,6 +1,6 @@
 # DOS file formats
 
-*The asset files of the 1994 DOS release: the MADSPACK containers of MicroProse's MADS engine, the FAB compression inside them, and the sprites, pictures, fonts, palettes, maps and text they carry.*
+*The asset files of the 1994 DOS release: the MADSPACK containers of MicroProse's MADS engine, the FAB compression inside them, and the sprites, pictures, fonts, palettes and text they carry.*
 
 Every claim on these pages is either read from the code of `VICEROY.EXE` or
 measured over every shipped file. Addresses are **file offsets** in the shipped
@@ -20,8 +20,14 @@ its tests re-measure the counts on these pages against a real install.
 | [`.PIK` pictures](pik.md) | 35 | round-trips |
 | [`.FF` fonts](ff.md) | 5 | every byte accounted for |
 | [Palettes and `VICEROY.PAL`](palettes.md) | 1, plus one in nearly every sheet and picture | stored on disk, 6 bits a channel |
-| [Maps and saves](maps-and-saves.md) | `AMER2.MP`, `COLONYnn.SAV` | the Windows save layout, byte for byte |
 | [Text files](text.md) | 18 `.TXT`, 2 `.DB` | plain code page 437 |
+
+## Saves and maps
+
+`COLONYnn.SAV` and `AMER2.MP` are in formats the Windows release shares byte
+for byte, so they are documented once, under
+[shared file formats](../shared/index.md): [`.SAV` saves](../shared/save.md)
+and [`.MP` maps](../shared/mp-map.md).
 
 ## Not covered yet
 

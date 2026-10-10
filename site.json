@@ -23,9 +23,18 @@
       ]
     },
     {
+      "dir": "formats/shared",
+      "title": "Shared file formats",
+      "blurb": "Saved games and maps: the files both releases read and write byte for byte the same.",
+      "pages": [
+        "save",
+        "mp-map"
+      ]
+    },
+    {
       "dir": "formats/windows",
       "title": "Windows file formats",
-      "blurb": "Every file of the 1995 Windows release, byte by byte: the NE container, sprites, canvases, colour tables, text, maps and saves.",
+      "blurb": "Every file of the 1995 Windows release, byte by byte: the NE container, sprites, canvases, colour tables, palettes, text and the installer's archive.",
       "pages": [
         "files",
         "ne-container",
@@ -36,15 +45,13 @@
         "text",
         "flic",
         "dib",
-        "mp-map",
-        "save",
         "arcv"
       ]
     },
     {
       "dir": "formats/dos",
       "title": "DOS file formats",
-      "blurb": "The 1994 DOS release's MADSPACK archives, FAB compression, sprite sheets, pictures, fonts, palettes, maps and saves.",
+      "blurb": "The 1994 DOS release's MADSPACK archives, FAB compression, sprite sheets, pictures, fonts, palettes and text.",
       "pages": [
         "madspack",
         "fab",
@@ -52,7 +59,6 @@
         "pik",
         "ff",
         "palettes",
-        "maps-and-saves",
         "text"
       ]
     },

@@ -13,8 +13,9 @@ Every push to `main` rebuilds and deploys it.
 | Section | Status |
 | --- | --- |
 | Player guides — map generation, terrain, units, Europe, taxes, combat, Founding Fathers, difficulty | published |
-| Windows file formats — every file of the 1995 release: NE container, `SPRT`, `CVPC`, `CTAB`, palettes, `TEXT`, `FLIC`, DIBs, `.MP`, `.SAV`, ARCV | published |
-| DOS file formats — MADSPACK, FAB, `.SS`, `.PIK`, `.FF`, palettes, maps and saves, text | published |
+| Shared file formats — `.SAV` saves and `.MP` maps, the same bytes in both releases | published |
+| Windows file formats — every file of the 1995 release: NE container, `SPRT`, `CVPC`, `CTAB`, palettes, `TEXT`, `FLIC`, DIBs, ARCV | published |
+| DOS file formats — MADSPACK, FAB, `.SS`, `.PIK`, `.FF`, palettes, text | published |
 | Version differences — asset formats compared; rules, interface and the Macintosh release to come | started |
 
 The file format pages are the reference for the project's asset tools,

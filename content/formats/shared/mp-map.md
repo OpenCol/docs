@@ -1,13 +1,16 @@
 # `.MP` — map files
 
-One ships with the game: `AMER2.MP`, 12,534 bytes. `colwin` reads it —
-`colwin map-preview` draws it as a PNG, see [map preview](https://opencol.github.io/win-tools/map-preview.html) —
-and does not write it. This page records the layout, which is solved.
+*The map file both releases read: a size, a version word and three byte planes. The one that ships, `AMER2.MP`, is the same file in both.*
+
+`AMER2.MP`, 12,534 bytes, ships with both the DOS and the Windows game, byte
+for byte identical. The map previews of
+[win-tools](https://opencol.github.io/win-tools/map-preview.html) and
+[dos-tools](https://github.com/OpenCol/dos-tools) draw it as a PNG.
 
 ```
 WORD  width          58
 WORD  height         72
-WORD  UNKNOWN        4
+WORD  version        4
 BYTE  terrain[w*h]   plane 0
 BYTE  plane1[w*h]    plane 1
 BYTE  plane2[w*h]    plane 2
@@ -15,10 +18,16 @@ BYTE  plane2[w*h]    plane 2
 
 Every byte is accounted for: `6 + 3 × 58 × 72 = 12,534`, exactly the file size.
 
-The DOS release ships the same `AMER2.MP`, byte for byte. Its map loader reads
-the third word as a version and refuses any file where it is not 4; see
-[DOS maps and saves](../dos/maps-and-saves.md). No Windows routine has been
-shown reading that word, so on this page it stays **UNKNOWN**.
+## The loader
+
+The DOS game's `load_map_file` (`VICEROY.EXE` file `0x71106`) reads the size,
+then the version word, which it **refuses unless it is 4**, then exactly three
+planes into the game's planes 0, 1 and 2. A map of more than 12,000 squares is
+refused (`map_check`). The Windows loader has not been traced, but it reads the
+same file.
+
+Plane 3 — which nations have seen each square — is not in a map file; it exists
+only in a [save](save.md), which carries all four planes.
 
 ## Planar, not three bytes per tile
 
@@ -41,9 +50,11 @@ art the plane is the Americas: North, Central and South America, the Caribbean
 chain, Florida, the Gulf of Mexico, Baja California, with the Rockies and the
 Andes where they belong.
 
-**Plane 1 — all zero.** Purpose UNKNOWN. It is not padding: it sits between two
-live planes. A second shipped file would settle whether it is always zero, and
-there is only one.
+**Plane 1 — all zero.** The loader reads it into the game's plane 1, which in a
+running game is the bitfield of what is on a square: units, settlements, roads,
+plowing (see [the save's planes](save.md#the-map-planes)). All zero is what a
+map nobody has played on would hold; whether every `.MP` must carry it zero is
+not established, as only one file ships.
 
 **Plane 2 — correlated with land and water, not established as either.**
 
@@ -53,9 +64,11 @@ there is only one.
 | any other terrain | 21 | 1,162 | 21 | 53 |
 
 1 tracks water and 2 tracks land, but roughly 250 tiles disagree and the values
-3, 5, 6 and 7 are unexplained.
+3, 5, 6 and 7 are unexplained. Every value is below 16, so all of it lives in
+the low nibble of the game's plane 2 — the nibble a save's plane 2 leaves
+unidentified, beside the owning nation in the high one.
 
 ## Cross-check
 
-`AUTO01.SAV` carries `3a 00 48 00` — 58 × 72 — at offset `0x0c`: the same
+Every known save carries `3a 00 48 00` — 58 × 72 — at offset `0x0c`: the same
 dimensions, in a different file, written by a different routine.

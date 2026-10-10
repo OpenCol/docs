@@ -235,11 +235,11 @@ They group by name into anthems and ceremony (`ENGLAND`, `FRANCE`, `SPAIN`,
 The Americas map: 58 × 72 tiles in three planes. Every byte is accounted for —
 `6 + 3 × 58 × 72` is exactly the file size. Rendering plane 0 draws North,
 Central and South America, the Caribbean chain, Florida, the Gulf and Baja
-California. See [the .MP format](mp-map.md).
+California. See [the .MP format](../shared/mp-map.md).
 
 ### `AUTO01.SAV` — 25,585 bytes
 
 The one saved game that ships. Magic `COLONIZE\0`. Its **structure** is solved
 from the save routine itself — 57 write calls accounting for all 25,585 bytes —
 and it carries the same 58 × 72 dimensions as `AMER2.MP` at offset `0x0c`. What
-the fields *mean* is open. See [the save format](save.md).
+the fields *mean* is open. See [the save format](../shared/save.md).

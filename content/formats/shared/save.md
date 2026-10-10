@@ -2,9 +2,15 @@
 
 *Version `0x49`, the same file in both releases: a 16-byte header, a globals block, three counted record arrays, four map planes and a fixed tail. 57 fields, no checksum.*
 
-`AUTO01.SAV`, 25,585 bytes, is the only save that ships with the Windows game.
-Addresses below are in `COLONIZE.EXE`. The DOS game writes the same layout (see
-[the DOS save](#the-dos-save-is-the-same-file)).
+The DOS game of 1994 and the Windows game of 1995 write the same file: a save
+from one is, byte for byte, a save the other's layout describes (see
+[one format, two releases](#one-format-two-releases)). `AUTO01.SAV`, 25,585
+bytes, is the only save that ships with the Windows game; the DOS game ships
+none, and ten 1994 saves (`COLONY00`–`COLONY09.SAV`) were tested.
+
+Addresses of the form `1008:a7f6` are segment:offset in the Windows
+`COLONIZE.EXE`; DOS addresses are file offsets in `VICEROY.EXE`, given with the
+routine's name.
 
 **The structure is solved; many meanings are not.** All 57 fields have a known
 offset and size, and they account for the file exactly: 25,585 bytes computed
@@ -20,7 +26,7 @@ four map planes.
 ## Where the layout comes from
 
 The layout was not inferred from patterns in the bytes. It comes from the
-routine that writes them. `1008:a7f6` is the save routine, 2,627 bytes, and it
+routine that writes them. In the Windows game, `1008:a7f6` is the save routine, 2,627 bytes, and it
 is the only function that calls the file-write forwarder — **57 times**. Each
 call is `cdecl`, so the pushes at each site give the file's fields in order
 together with the address each is written from.
@@ -30,6 +36,26 @@ makes 57, because it reads three contiguous runs in one call — including the
 first ten bytes, which it reads into a stack local in order to *validate*
 rather than keep. Derived from the loader alone, the layout agrees with the
 saver's on every field's source address and size.
+
+In the DOS game, `save_game` (file `0x734f8`) writes the magic with
+`save_string` — the string, a NUL, then `0x1a` — then the version word, the map
+size, the fixed blocks, the three record arrays, the four planes and the
+1,502-byte tail, in the same order.
+
+## One format, two releases
+
+| | Windows | DOS |
+| --- | --- | --- |
+| Magic, `0x1a`, version | `COLONIZE\0`, `0x1a`, `0x49` | the same bytes |
+| Saver | `1008:a7f6`, 57 writes | `save_game`, file `0x734f8` |
+| Size closure | `3005 + 202·C + 28·U + 18·S + 4·w·h + 1502` | the same |
+| Scenery seed | 890 bytes from the end | the same; read by `resource_at` and `lost_city_at` |
+| Byte order | little-endian; the swap helpers are identities | little-endian |
+
+All ten 1994 DOS saves parse with the 57-field layout on this page and
+re-serialise byte for byte, and their dates satisfy the
+[calendar rule](#the-calendar-cross-check). Every save known from either
+release carries version `0x49`.
 
 ## Five facts that shape any editor
 
@@ -196,15 +222,6 @@ into a local of its own and discards them, so they do no harm.
 
 They sit 898 bytes from the end of the file — at `0x606f` in `AUTO01.SAV`.
 Never compare two saves on them.
-
-## The DOS save is the same file
-
-A DOS save has the same layout: the same magic and `0x1a`, the same version
-word — `0x49`, 73, in `AUTO01.SAV` and in the 1994 DOS saves alike — the map
-size at `0x0c`, and records of the same three sizes ahead of the planes. All
-ten 1994 DOS saves tested parse with this layout and re-serialise byte for
-byte. The DOS page gives the DOS routine's address:
-[DOS maps and saves](../dos/maps-and-saves.md).
 
 ## What is still unknown
 

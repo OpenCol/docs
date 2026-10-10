@@ -22,8 +22,6 @@ each one holds.
 | [`TEXT`](text.md) | 737, mostly `COLTEXT0` | re-encodes byte-identical |
 | [`FLIC`](flic.md) | 1, in `COLDATA7` | decoded; carried through on rebuild |
 | [Windows DIBs](dib.md) | bitmaps, icons, cursors | bitmaps round-trip |
-| [`.MP` maps](mp-map.md) | `AMER2.MP` | solved |
-| [`.SAV` saves](save.md) | `AUTO01.SAV`; the DOS saves too | all 57 fields placed; about two thirds understood |
 | [ARCV](arcv.md) | `COLONIZE.$00` | solved |
 
 ## Not solved
@@ -34,6 +32,13 @@ than shaped into a plausible-looking table.
 
 `COLWIN.PRF` (412 bytes of preferences) and `SETUP.INF` (the installer's own
 compressed script) are likewise unread.
+
+## Saves and maps
+
+`AUTO01.SAV` and `AMER2.MP` are in formats the DOS release shares byte for
+byte, so they are documented once, under
+[shared file formats](../shared/index.md): [`.SAV` saves](../shared/save.md)
+and [`.MP` maps](../shared/mp-map.md).
 
 ## The other release
 
