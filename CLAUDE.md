@@ -4,7 +4,7 @@ Guidance for Claude Code working in this repo.
 
 ## What this is
 
-The public documentation site for the Colonization RE project, deployed to
+The public documentation site for the OpenCol project, deployed to
 <https://opencol.github.io/docs/> by `.github/workflows/pages.yml` on
 every push to `main`. Markdown in `content/` → static HTML in `_site/`.
 

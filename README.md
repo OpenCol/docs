@@ -1,11 +1,11 @@
-# Colonization RE documentation
+# OpenCol documentation
 
 How Sid Meier's Colonization really works, read out of the game's own code.
 
 **Read it at <https://opencol.github.io/docs/>.**
 
 The site is plain Markdown in `content/`, rendered to static HTML by a small
-Node script and styled with [web-ui](https://github.com/colonization-re/web-ui).
+Node script and styled with [web-ui](https://github.com/OpenCol/web-ui).
 Every push to `main` rebuilds and deploys it.
 
 ## What is here

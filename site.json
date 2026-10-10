@@ -1,9 +1,9 @@
 {
-  "title": "Colonization RE",
+  "title": "OpenCol",
   "subtitle": "Documentation",
   "description": "How Sid Meier's Colonization really works, read out of the game's own code: player guides, file formats and the differences between versions.",
   "base": "/docs/",
-  "repo": "https://github.com/colonization-re/docs",
+  "repo": "https://github.com/OpenCol/docs",
   "sections": [
     {
       "dir": "players",

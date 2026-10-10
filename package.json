@@ -1,7 +1,7 @@
 {
-  "name": "@colonization-re/docs",
+  "name": "@opencol/docs",
   "private": true,
-  "description": "Documentation site for the Colonization RE project, built for GitHub Pages",
+  "description": "Documentation site for the OpenCol project, built for GitHub Pages",
   "type": "module",
   "license": "MIT",
   "engines": {

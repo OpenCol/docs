@@ -203,7 +203,7 @@ async function stylesheet() {
     throw new Error("WEB_UI_VERSION must hold a release tag such as v1.2.0");
   }
   const cache = path.join(ROOT, ".cache", "web-ui", WEB_UI_VERSION);
-  const base = `https://github.com/colonization-re/web-ui/releases/download/${WEB_UI_VERSION}`;
+  const base = `https://github.com/OpenCol/web-ui/releases/download/${WEB_UI_VERSION}`;
   fs.mkdirSync(cache, { recursive: true });
   const fetchTo = async (name) => {
     const file = path.join(cache, name);
